@@ -55,10 +55,10 @@ public class WordCountDriver {
 		job.setOutputFormatClass(TextOutputFormat.class);
 		
 		//告诉框架，我们要处理的数据文件在那个路劲下
-		FileInputFormat.setInputPaths(job, new Path("/wordcount/input"));
+		FileInputFormat.setInputPaths(job, new Path("d://wordcount/input"));
 		
 		//告诉框架，我们的处理结果要输出到什么地方
-		FileOutputFormat.setOutputPath(job, new Path("/wordcount/output"));
+		FileOutputFormat.setOutputPath(job, new Path("d://wordcount/output"));
 		
 		boolean res = job.waitForCompletion(true);
 		
